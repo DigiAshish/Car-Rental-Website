@@ -1,0 +1,10 @@
+[16-Nov-2016 17:46:54 CST6CDT] PHP Parse error:  syntax error, unexpected ''<p>Your message has been sent' (T_CONSTANT_ENCAPSED_STRING) in /home/digiashi/public_html/project/contact.php on line 12
+[16-Nov-2016 17:52:17 CST6CDT] PHP Parse error:  syntax error, unexpected 'contact' (T_STRING), expecting ',' or ';' in /home/digiashi/public_html/project/contact.php on line 13
+[16-Nov-2016 17:52:55 CST6CDT] PHP Parse error:  syntax error, unexpected 'contact' (T_STRING), expecting ',' or ';' in /home/digiashi/public_html/project/contact.php on line 13
+[02-Dec-2016 17:38:58 CST6CDT] PHP Parse error:  syntax error, unexpected end of file in /home/digiashi/public_html/project/payment.php on line 18
+[02-Dec-2016 18:08:31 CST6CDT] PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/digiashi/public_html/project/payment.php on line 3
+[03-Dec-2016 13:37:58 CST6CDT] PHP Parse error:  syntax error, unexpected '<' in /home/digiashi/public_html/project/findcars.php on line 3
+[03-Dec-2016 13:39:04 CST6CDT] PHP Parse error:  syntax error, unexpected '$_POST' (T_VARIABLE), expecting ',' or ';' in /home/digiashi/public_html/project/findcars.php on line 4
+[03-Dec-2016 13:39:25 CST6CDT] PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/digiashi/public_html/project/findcars.php on line 4
+[03-Dec-2016 13:42:38 CST6CDT] PHP Parse error:  syntax error, unexpected 'Date' (T_STRING), expecting ',' or ';' in /home/digiashi/public_html/project/findcars.php on line 2
+[03-Dec-2016 18:04:26 CST6CDT] PHP Fatal error:  Call to undefined method mysqli_result::num_rows() in /home/digiashi/public_html/project/booking.php on line 18

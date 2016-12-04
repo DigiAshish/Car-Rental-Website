@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Payment Form</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  
+  <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css'>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+      <link rel="stylesheet" href="css/pay_style.css">
+  
+</head>
+
+<body>	
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<div class="wrap"> 
+		<div class="wrap"> 
+				<div class="h-bg">
+					<div class="total">
+						<div class="header">
+							<div class="clear"></div>
+								<div class="header-bot">
+						<div class="logo">
+							<a href="index.php"><img src="images/logo.png" alt="Rent Wheels" /></a>
+						</div>
+						<div class="cart">
+					    	<ul class="ph-no">
+								<li class="item  first_item">
+									<div class="item_html">
+										<span class="text1">Wheels on the go!</span>
+									</div>
+								</li>
+							</ul>
+							<?php 
+							if($_SESSION['user_id']!=null)
+							{
+							echo "<div class=myaccount>
+		   	   					<span><a href=myaccount.php>MY ACCOUNT</a></span>
+		   					</div>";
+							}
+							?>
+				    		
+				    		
+						</div>					
+						<div class="clear"></div>
+												
+					</div>
+			</div>			
+			<div class="orange"></div>
+				<div class="menu"> 	
+					<div class="top-nav"> 
+							<ul>
+								<li class="active"><a href="index.php">Home</a></li>
+								<li><a href='#findCars'>Find Cars</a></li>
+								<li><a href="about.html">About Us</a></li>
+								<li><a href="contact.html">Contact Us</a></li>
+							</ul>
+							<div class="clear"></div> 
+					</div>
+				</div>		
+<div class="container">
+  <div id="Checkout" class="inline">
+      <h1>Pay Invoice</h1>
+      <div class="card-row">
+          <span class="visa"></span>
+          <span class="mastercard"></span>
+          <span class="amex"></span>
+          <span class="discover"></span>
+      </div>
+      <form name="myForm" method="POST" action="payment.php" onsubmit="return validateForm()">
+     <table width=518 border="0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+  <tr bgcolor="#E5E5E5"> 
+    <td height="22" colspan="3" align="left" valign="middle"><strong>&nbsp;Billing Information (required)</strong></td>
+  </tr>
+  <tr> 
+    <td height="22" width="180" align="right" valign="middle">Name on the Card:</td>
+    <td colspan="2" align="left"><input name="NameOnCard" type="text" size="50"></td>
+  </tr>
+  <tr> 
+    <td height="22" align="right" valign="middle">Zip/Postal Code:</td>
+    <td colspan="2" align="left"><input name="ZIPCode" type="text" value="" size="50"></td>
+  </tr>
+  <tr> 
+    <td height="22" align="right" valign="middle">Credit Card Number:</td>
+    <td colspan="2" align="left"><input name="CreditCardNumber" type="text" value="" size="19" maxlength="40"></td>
+  </tr>
+  <tr> 
+    <td height="22" align="right" valign="middle">Expiry Date:</td>
+    <td colspan="2" align="left">
+      <SELECT NAME="CCExpiresMonth" >
+        <OPTION VALUE="" SELECTED>--Month--
+        <OPTION VALUE="01">January (01)
+        <OPTION VALUE="02">February (02)
+        <OPTION VALUE="03">March (03)
+        <OPTION VALUE="04">April (04)
+        <OPTION VALUE="05">May (05)
+        <OPTION VALUE="06">June (06)
+        <OPTION VALUE="07">July (07)
+        <OPTION VALUE="08">August (08)
+        <OPTION VALUE="09">September (09)
+        <OPTION VALUE="10">October (10)
+        <OPTION VALUE="11">November (11)
+        <OPTION VALUE="12">December (12)
+      </SELECT> /
+      <SELECT NAME="CCExpiresYear">
+        <OPTION VALUE="" SELECTED>--Year--
+        <OPTION VALUE="04">2004
+        <OPTION VALUE="05">2005
+        <OPTION VALUE="06">2006
+        <OPTION VALUE="07">2007
+        <OPTION VALUE="08">2008
+        <OPTION VALUE="09">2009
+        <OPTION VALUE="10">2010
+        <OPTION VALUE="11">2011
+        <OPTION VALUE="12">2012
+        <OPTION VALUE="13">2013
+        <OPTION VALUE="14">2014
+        <OPTION VALUE="15">2015
+      </SELECT>
+    </td>
+  </tr>
+  <tr> 
+    <td height="22" align="right" valign="middle">CVV:</td>
+    <td colspan="2" align="left"><input name="SecurityCode" type="text" value="" size="19" maxlength="40"></td>
+  </tr>
+</table>
+<p><input name="Submit" type="submit" value="Send Secure Form &gt;&gt;"></p>
+</form>
+  </div>
+</div>
+</div>
+<script>
+function validateForm() {
+    var x = document.forms["myForm"]["NameOnCard"].value;
+    if (x == "") {
+        alert("Name must be filled out");
+        return false;
+    }
+    var y = document.forms["myForm"]["ZIPCode"].value;
+    if (y == "") {
+        alert("Zip code must be filled out");
+        return false;
+    }
+    var z = document.forms["myForm"]["CreditCardNumber"].value;
+    if (z == "") {
+        alert("Credit Crad must be filled out");
+        return false;
+    }
+    var z1 = document.forms["myForm"]["CreditCardNumber"].value;
+    if (z1.length < 16) {
+        alert("Credit Crad must be min 16 digits");
+        return false;
+    }
+    var w = document.forms["myForm"]["SecurityCode"].value;
+    if (w == "") {
+        alert("CVV number must be filled out");
+        return false;
+    }
+     var w1 = document.forms["myForm"]["SecurityCode"].value;
+    if (w1 .length < 3 || w1 .length > 3) {
+        alert("CVV number must be 3 digit only");
+        return false;
+    }
+}
+</script>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js'></script>
+
+    <script src="js/pay_index.js"></script>
+    
+    <div class="footer">
+		<div class="section group">
+				<div class="col_1_of_4 span_1_of_4">
+					<h3>INFORMATION</h3>
+					<ul>
+						<li><a href="#">About us</a></li>
+						<li><a href="#">Sitemap</a></li>
+						<li><a href="#">Contact</a></li>
+						<li><a href="#">Terms and conditions</a></li>
+						<li><a href="#">Legal Notice</a></li>
+					</ul>
+				</div>
+				<div class="col_1_of_4 span_1_of_4">
+					<h3>OUR OFFERS</h3>
+					<ul>
+						<li><a href="#">New products</a></li>
+						<li><a href="#">top sellers</a></li>
+						<li><a href="#">Specials</a></li>
+						<li><a href="#">Products</a></li>
+						<li><a href="#">Comments</a></li>
+					</ul>
+				</div>
+				<div class="col_1_of_4 span_1_of_4">
+					<h3>YOUR ACCOUNT</h3>
+					<ul>
+						<li><a href="#">Your Account</a></li>
+						<li><a href="#">Personal info</a></li>
+						<li><a href="#">Prices</a></li>
+						<li><a href="#">Address</a></li>
+						<li><a href="#">Locations</a></li>
+					</ul>
+				</div>
+				<div class="col_1_of_4 span_1_of_4 footer-lastgrid">
+					<h3>Get in touch</h3>
+					<ul>
+						<li><a href="#"><img src="images/facebook.png" title="facebook"></a></li>
+						<li><a href="#"><img src="images/twitter.png" title="Twiiter"></a></li>
+						<li><a href="#"><img src="images/rss.png" title="Rss"></a></li>
+						<li><a href="#"><img src="images/gpluse.png" title="Google+"></a></li>
+					</ul>
+					<p>Design by <a href="#">Rent Wheels</a></p>
+				</div>
+				<div class="clear"></div> 
+		</div>
+	</div>	
+
+</body>
+</html>

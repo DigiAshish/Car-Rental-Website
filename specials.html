@@ -1,0 +1,258 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<title>Rent Wheels Search Result </title>
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $(".dropdown img.flag").addClass("flagvisibility");
+
+            $(".dropdown dt a").click(function() {
+                $(".dropdown dd ul").toggle();
+            });
+                        
+            $(".dropdown dd ul li a").click(function() {
+                var text = $(this).html();
+                $(".dropdown dt a span").html(text);
+                $(".dropdown dd ul").hide();
+                $("#result").html("Selected value is: " + getSelectedValue("sample"));
+            });
+                        
+            function getSelectedValue(id) {
+                return $("#" + id).find("dt a span.value").html();
+            }
+
+            $(document).bind('click', function(e) {
+                var $clicked = $(e.target);
+                if (! $clicked.parents().hasClass("dropdown"))
+                    $(".dropdown dd ul").hide();
+            });
+
+
+            $("#flagSwitcher").click(function() {
+                $(".dropdown img.flag").toggleClass("flagvisibility");
+            });
+        });
+    </script>
+</head>
+<body>
+<div class="header-bg">
+	<div class="wrap"> 
+		<div class="h-bg">
+			<div class="total">
+				<div class="bot2"></div>
+				<div class="header">
+					<div class="header_top_right">
+						<dl id="sample" class="dropdown">
+					        <dt><a href="#"><span>Please Select the Country</span></a></dt>
+					        <dd>
+					            <ul>
+					                <li><a href="#">Australia<img class="flag" src="images/as.png" alt="" /><span class="value">AS</span></a></li>
+					                <li><a href="#">Sri Lanka<img class="flag" src="images/srl.png" alt="" /><span class="value">SL</span></a></li>
+					                <li><a href="#">Newziland<img class="flag" src="images/nz.png" alt="" /><span class="value">NZ</span></a></li>
+					                <li><a href="#">Pakistan<img class="flag" src="images/pk.png" alt="" /><span class="value">Pk</span></a></li>
+					               	<li><a href="#">United Kingdom<img class="flag" src="images/uk.png" alt="" /><span class="value">UK</span></a></li>
+					                <li><a href="#">United States<img class="flag" src="images/us.png" alt="" /><span class="value">US</span></a></li>
+					            </ul>
+					        </dd>
+		   				 </dl>
+		 				 <div class="dropdown" id="dropdown">
+							<input type="checkbox" id="drop1" />
+		        			<label for="drop1" class="dropdown_button">$&nbsp;&nbsp;<span class="arrow"></span></label>
+		        				<ul class="dropdown_content">
+			       					<ul>
+										<li><a href="#"><span>$</span>Dollar</a></li>
+										<li><a href="#"><span>€</span>Euro</a></li>
+									</ul>
+								</ul>		
+						</div> 
+						<div class="clear"></div>
+			 		</div>
+					 <div class="clear"></div>
+					<div class="header-bot">
+						<div class="logo">
+							<a href="index.php"><img src="images/logo.png" alt=""/></a>
+						</div>
+						
+				    		<div class="login">
+		   	   					<span><a href="#"><img src="images/login.png" alt="" title="login"></a></span>
+		   					</div>
+				    							
+						<div class="clear"></div> 
+					</div>
+			</div>	
+				<div class="menu"> 	
+					<div class="top-nav"> 
+							<ul>
+								<li><a href="index.php">Home</a></li>
+								<li><a href="about.html">Find Cars</a></li>
+								<li class="active"><a href="about.html">About Us</a></li>
+								<li><a href="contact.html">Contact Us</a></li>
+							</ul>
+							<div class="clear"></div> 
+					</div>
+				</div>		
+		<div class="content-top">
+			<div class="col_1_of_3 span_1_of_3">
+				<div class="span4">
+					<img src="images/pic.jpg" alt=""/>
+					
+				 </div>
+			</div>
+			<div class="col_1_of_3 span_1_of_3">
+				<div class="span4">
+					<img src="images/pic1.jpg" alt=""/>
+					
+				 </div>
+			</div>
+			<div class="col_1_of_3 span_1_of_3">
+				<div class="span4">
+					<img src="images/pic2.jpg" alt=""/>
+					
+				 </div>
+			</div>
+			<div class="clear"></div> 
+	   </div>
+	   <div class="content-bottom">
+		<div class="cont span_2_of_3">
+			<h4><span>Searched products</span></h4>
+			<div class="grid-bottom">
+				<div class="col_1_of_b span_1_of_bottom">
+					<div class="grids "> 
+						<img src="images/pic3.jpg" alt=""/>
+							<div class="price">
+								<div class="bot1">
+									<p class="title" style="height: 24px; width: 180px;">Car name:Nissan Sentra</p>
+									<p class="title" style="height: 24px;width: 180px;">No of Seats:4</p>
+									<p class="title" style="height: 24px;width: 180px;">Available at: Dallas</p>
+									<div class="price1" style="height: 19px;padding-top: 10px;">
+								 		<span class="actual">$20.00</span>
+									</div>
+								</div>
+								<div class="cart1">
+									<a class="book-now" href="payment.html" title="Book Now"><img 			src="images/booknow.png" style="height: 30px; width: 200px;" alt=""/></a>
+								</div>
+								<div class="clear"></div>
+							</div>
+					</div>
+			    	</div>
+				<div class="clear"></div> 
+		</div>
+	</div>				    
+			<div class="rsidebar span_1_of_3">
+				<div class="sidebar">
+					<h4 class="title_block"><span>Advertisement</span></h4>
+				    <div class class="newitem">
+						<a class="product-image" href="#" title="Find SUV at Lowest Price"><img src="images/pic9.jpg" alt="Find SUV at Lowest Price"></a>
+							<div class="product-details">
+								<p class="product-name"><a href="#">Find SUV at Lowest Price</a></p>
+								<div class="price-box">
+									<p class="old-price">
+										<span class="reducedfrom">$66.00</span>
+									</p>
+								</div>
+									<p class="special-price">
+										<span class="actual1">$25.00</span>
+									</p>
+									<a href="#" class="link-cart">Read More</a>
+							</div>
+							<div class="clear"></div> 
+					</div>
+				</div>
+				<div class="sidebar">
+					<div class class="newitem">
+						<a class="product-image" href="#" title="Find SUV at Lowest Price"><img src="images/pic10.jpg" alt="Find SUV at Lowest Price "></a>
+							<div class="product-details">
+								<p class="product-name"><a href="#">Find SUV at Lowest Price</a></p>
+								<div class="price-box">
+									<p class="old-price">
+										<span class="reducedfrom">$66.00</span>
+									</p>
+								</div>
+									<p class="special-price">
+										<span class="actual1">$20.00</span>
+									</p>
+									<a href="#" class="link-cart">Read More</a>
+							</div>
+							<div class="clear"></div> 
+					</div>
+				</div>
+				<div class="sidebar1">
+					<div class class="newitem">
+						<a class="product-image" href="#" title="Find SUV at Lowest Price"><img src="images/pic11.jpg" alt="Find SUV at Lowest Price"></a>
+							<div class="product-details">
+								<p class="product-name"><a href="#">Find SUV at Lowest Price</a></p>
+								<div class="price-box">
+									<p class="old-price">
+										<span class="reducedfrom">$66.00</span>
+									</p>
+								</div>
+									<p class="special-price">
+										<span class="actual1">$30.00</span>
+									</p>
+									<a href="#" class="link-cart">Read More</a>
+							</div>
+							<div class="clear"></div> 
+					</div>
+				</div>
+			</div>
+				<div class="clear"></div> 
+	</div>
+	<div class="footer">
+		<div class="section group">
+				<div class="col_1_of_4 span_1_of_4">
+					<h3>INFORMATION</h3>
+					<ul>
+						<li><a href="#">About us</a></li>
+						<li><a href="#">Sitemap</a></li>
+						<li><a href="#">Contact</a></li>
+						<li><a href="#">Terms and conditions</a></li>
+						<li><a href="#">Legal Notice</a></li>
+					</ul>
+				</div>
+				<div class="col_1_of_4 span_1_of_4">
+					<h3>OUR OFFERS</h3>
+					<ul>
+						<li><a href="#">New products</a></li>
+						<li><a href="#">top sellers</a></li>
+						<li><a href="#">Specials</a></li>
+						<li><a href="#">Products</a></li>
+						<li><a href="#">Comments</a></li>
+					</ul>
+				</div>
+				<div class="col_1_of_4 span_1_of_4">
+					<h3>YOUR ACCOUNT</h3>
+					<ul>
+						<li><a href="#">Your Account</a></li>
+						<li><a href="#">Personal info</a></li>
+						<li><a href="#">Prices</a></li>
+						<li><a href="#">Address</a></li>
+						<li><a href="#">Locations</a></li>
+					</ul>
+				</div>
+				<div class="col_1_of_4 span_1_of_4 footer-lastgrid">
+					<h3>Get in touch</h3>
+					<ul>
+						<li><a href="#"><img src="images/facebook.png" title="facebook"></a></li>
+						<li><a href="#"><img src="images/twitter.png" title="Twiiter"></a></li>
+						<li><a href="#"><img src="images/rss.png" title="Rss"></a></li>
+						<li><a href="#"><img src="images/gpluse.png" title="Google+"></a></li>
+					</ul>
+					<p>Design by <a href="#">Rent Wheels</a></p>
+				</div>
+				<div class="clear"></div> 
+		</div>
+	</div>
+   </div>
+</div>
+</div>
+</div>
+</body>
+</html>
+
+    	
+    	
+            

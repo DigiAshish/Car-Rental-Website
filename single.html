@@ -1,0 +1,251 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<title>Rent Wheels</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $(".dropdown img.flag").addClass("flagvisibility");
+
+            $(".dropdown dt a").click(function() {
+                $(".dropdown dd ul").toggle();
+            });
+                        
+            $(".dropdown dd ul li a").click(function() {
+                var text = $(this).html();
+                $(".dropdown dt a span").html(text);
+                $(".dropdown dd ul").hide();
+                $("#result").html("Selected value is: " + getSelectedValue("sample"));
+            });
+                        
+            function getSelectedValue(id) {
+                return $("#" + id).find("dt a span.value").html();
+            }
+
+            $(document).bind('click', function(e) {
+                var $clicked = $(e.target);
+                if (! $clicked.parents().hasClass("dropdown"))
+                    $(".dropdown dd ul").hide();
+            });
+
+
+            $("#flagSwitcher").click(function() {
+                $(".dropdown img.flag").toggleClass("flagvisibility");
+            });
+        });
+    </script>
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script> 
+<link rel="stylesheet" href="css/global.css">
+<script src="js/slides.min.jquery.js"></script>
+   <script>
+		$(function(){
+			$('#products').slides({
+				preload: true,
+				preloadImage: 'img/loading.gif',
+				effect: 'slide, fade',
+				crossfade: true,
+				slideSpeed: 350,
+				fadeSpeed: 500,
+				generateNextPrev: true,
+				generatePagination: false
+			});
+		});
+	</script>
+</head>
+<body>
+<div class="header-bg">
+	<div class="wrap"> 
+		<div class="h-bg">
+			<div class="total">
+				<div class="bot2"></div>
+				<div class="header">
+					<div class="header_top_right">
+						<div class="clear"></div>
+			 		</div>
+					 <div class="clear"></div>
+					<div class="header-bot">
+						<div class="logo">
+							<a href="index.html"><img src="images/logo.png" alt="Rent Wheels" height="62" width="102"/></a>
+						</div>
+						<div class="cart">
+					    	<ul class="ph-no">
+								<li class="item  first_item">
+								<div class="item_html">
+								<span class="text1">Order delivery:</span>
+								<span class="text2">+800-0005-5289</span>
+								</div>
+								</li>
+							</ul>
+				    		<div class="login">
+		   	   					<span><a href="#"><img src="images/login.png" alt="" title="login"></a></span>
+		   					</div>
+				    		<div class="cart-desc">
+				    			<div class="details-list">
+									<a href="" class="details"></a>
+								</div>
+								<a data-id="43;" class="button addToCart"><span>Cart</span></a>
+									<div class="clear"></div> 
+							</div>
+						</div>					
+						<div class="clear"></div> 
+					</div>
+			</div>	
+			 <div class="menu"> 	
+					<div class="top-nav"> 
+							<ul>
+								<li class="active"><a href="index.html">Home</a></li>
+								<li><a href="about.html">About</a></li>
+								<li><a href="specials.html">Specials</a></li>
+								<li><a href="contact.html">Contact</a></li>
+							</ul>
+							<div class="clear"></div> 
+					</div>
+				</div>		
+	<div class="content-bottom">
+	   		<div class="cont span_2_of_3">
+				<div class="top-index">&nbsp;&nbsp;<a href="#" class="headerNavigation">Catalog</a> »  
+					<a href="#" class="headerNavigation">Cars</a> » 
+					<a href="#" class="headerNavigation last">Model 0012</a></div>
+		 <div class="grid-bottom">
+				<div class="section group">
+					<div class="lsidebar span_1_of_s">
+					     <!-- <img src="images/pic12.jpg" alt=""/>-->
+					     <div id="container">
+						   <div id="products_example">
+							   <div id="products">
+								<div class="slides_container">
+									<a href="#" target="_blank"><img src="images/pic18.png" alt=" " /></a>
+									<a href="#" target="_blank"><img src="images/pic19.png" alt=" " /></a>
+									<a href="#" target="_blank"><img src="images/pic20.png" alt=" " /></a>					
+									<a href="#" target="_blank"><img src="images/pic21.png" alt=" " /></a>
+									<a href="#" target="_blank"><img src="images/pic22.png" alt=" " /></a>
+									<a href="#" target="_blank"><img src="images/pic23.png" alt=" " /></a>
+								</div>
+								<ul class="pagination">
+									<li><a href="#"><img src="images/t-pic18.png" alt=" " /></a></li>
+									<li><a href="#"><img src="images/t-pic19.png" alt=" " /></a></li>
+									<li><a href="#"><img src="images/t-pic20.png" alt=" " /></a></li>
+									<li><a href="#"><img src="images/t-pic21.png" alt=" " /></a></li>
+									<li><a href="#"><img src="images/t-pic22.png" alt=" " /></a></li>
+									<li><a href="#"><img src="images/t-pic23.png" alt=" " /></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					</div>
+					<div class="cont1 span_2_of_s">
+					       <h5>Lorem Ipsum is simply dummy text </h5>
+						   	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+						  <h2 class="head">Excepteur sint occaecat cupidatat non proident<br><span class="smallText">[Model 0011]</span></h2>
+						   	<h3 class="price1"><b>Price:&nbsp;&nbsp;</b><span class="productPrice">$499.99</span></h3>
+						   	<div class="options">
+								<p class="options-title">Available Options:</p>
+								<ul class="ofh">
+								<li class="li-first">
+									<label>Color:</label><select class="select1"><option value="2">original</option><option value="7">dark (+$15.00)</option><option value="1">light (+$35.00)</option></select>
+								</li>
+								<li class="fl_left last"><label>Size:</label><select name="select1"><option value="3">standard</option><option value="8">large (+$55.00)</option><option value="4">small (-$5.00)</option></select></li>
+								</ul>
+								<div class="clear"></div> 	
+							</div>
+								<p class="desc">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat. </p>
+						   	<div class="box_wrapper_title"><h1><span class="title-icon"></span>Tags of Product</h1></div>			    
+					</div>	
+					<div class="clear"></div> 			
+		         </div>
+				<div class="clear"></div> 
+		    </div>
+	</div>	
+	<div class="rsidebar span_1_of_3">
+				<div class="sidebar">
+					<h4 class="title_block"><span>Brands</span></h4>
+				   <div class="info-Box">
+						<ul style="list-style: none; margin: 0; padding: 0;">
+							<li class="first">
+								<a href="#">Visit Manufacturer-1 ..</a>
+							</li>
+							<li class="first">
+								<a href="#">Visit Manufacturer-2 ..</a>
+							</li>
+							<li class="last">
+								<a href="#">Visit Manufacturer-3 ..</a>
+							</li>
+						</ul>
+					</div>
+					<div class="box_wrapper_title"><h1><span class="title-icon"></span>Manufacturer Info</h1></div>
+				<div class="manu-info">
+					<h5><a href="#">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet</a></h5>
+				</div>
+				<div class="box_wrapper_title1"><h1><span class="title-icon"></span>Categories</h1></div>
+				<div class="sidebar-nav">
+		                <ul>
+		                   <li><a href="">Always free from repetition</a></li>
+		                    <li><a href="">Always free from repetition</a></li>
+		                    <li><a href="">The standard chunk of Lorem Ipsum</a></li>
+		                    <li><a href="">The standard chunk of Lorem Ipsum</a></li>
+		                    <li><a href="">The standard chunk of Lorem Ipsum</a></li>
+		                    <li><a href="">Always free from repetition</a></li>
+		                 </ul>
+		              </div>
+		         </div>
+				</div>			    
+			<div class="clear"></div> 
+		</div>
+	<div class="footer">
+		<div class="section group">
+				<div class="col_1_of_4 span_1_of_4">
+					<h3>INFORMATION</h3>
+					<ul>
+						<li><a href="#">About us</a></li>
+						<li><a href="#">Sitemap</a></li>
+						<li><a href="#">Contact</a></li>
+						<li><a href="#">Terms and conditions</a></li>
+						<li><a href="#">Legal Notice</a></li>
+					</ul>
+				</div>
+				<div class="col_1_of_4 span_1_of_4">
+					<h3>OUR OFFERS</h3>
+					<ul>
+						<li><a href="#">New products</a></li>
+						<li><a href="#">top sellers</a></li>
+						<li><a href="#">Specials</a></li>
+						<li><a href="#">Products</a></li>
+						<li><a href="#">Comments</a></li>
+					</ul>
+				</div>
+				<div class="col_1_of_4 span_1_of_4">
+					<h3>YOUR ACCOUNT</h3>
+					<ul>
+						<li><a href="#">Your Account</a></li>
+						<li><a href="#">Personal info</a></li>
+						<li><a href="#">Prices</a></li>
+						<li><a href="#">Address</a></li>
+						<li><a href="#">Locations</a></li>
+					</ul>
+				</div>
+				<div class="col_1_of_4 span_1_of_4 footer-lastgrid">
+					<h3>Get in touch</h3>
+					<ul>
+						<li><a href="#"><img src="images/facebook.png" title="facebook"></a></li>
+						<li><a href="#"><img src="images/twitter.png" title="Twiiter"></a></li>
+						<li><a href="#"><img src="images/rss.png" title="Rss"></a></li>
+						<li><a href="#"><img src="images/gpluse.png" title="Google+"></a></li>
+					</ul>
+					<p>Design by <a href="#">W3layouts</a></p>
+				</div>
+				<div class="clear"></div> 
+		</div>
+	</div>
+   </div>
+</div>
+</div>
+</div>
+</body>
+</html>
+
+    	
+    	
+            
